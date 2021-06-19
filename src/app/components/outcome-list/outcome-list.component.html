@@ -1,0 +1,20 @@
+<div class="button-row">
+    <p>El total de los pagos registrados para este periodo.</p>
+    <button mat-button color="primary">Primary</button>
+</div>
+<mat-card>
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Detail</th>
+            <th>CreateAt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let outcome of outcomes">
+            <td>{{outcome.amount}}</td>
+            <td>{{outcome.detail}}</td>
+            <td>{{outcome.createdAt}}</td>
+        </tr>
+    </tbody>
+</mat-card>
