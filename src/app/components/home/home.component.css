@@ -1,0 +1,19 @@
+.contenedor{
+    display:grid;
+    justify-content: left;
+    height: 100%;
+    background-color: white;
+    margin-left: 50px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.title{
+    color: black;
+    font-size:22px;
+    font-weight: bold;
+}
+.subtitle{
+    color:black;
+    font-size:14px;
+}
