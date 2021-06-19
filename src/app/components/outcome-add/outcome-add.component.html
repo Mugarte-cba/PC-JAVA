@@ -1,1 +1,19 @@
-<p>outcome-add works!</p>
+<div>
+    <div>
+        <p>Registrar un nuevo gasto</p>
+        <p>Desde aquí podrá registar un nuevo gasto.</p>
+    </div>
+    <form class="example-form">
+        <div *ngFor="let outcome of outcomes">
+            <mat-form-field class="example-full-width">
+            <mat-label>Monto</mat-label>
+            <input matInput placeholder="Monto" [(ngModel)]=outcome.amount>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+            <mat-label>Detalle</mat-label>
+            <input matInput placeholder="Detalle" [(ngModel)]=outcome.detail>
+            </mat-form-field>
+        </div>
+    </form>
+</div>

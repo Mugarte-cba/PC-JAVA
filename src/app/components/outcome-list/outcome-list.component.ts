@@ -9,9 +9,12 @@ import { OutcomeService } from '../../services/outcome.service';
 })
 export class OutcomeListComponent implements OnInit {
 
+  total: number;
   outcomes?:Outcome[];
 
-  constructor(private outcomeService:OutcomeService) { }
+  constructor(private outcomeService:OutcomeService) { 
+    this.total=0;
+  }
 
   ngOnInit(): void {
     this.outcomeService.getOutcomes()
@@ -21,6 +24,14 @@ export class OutcomeListComponent implements OnInit {
       error=>{
       console.log(error);
     });
+    this.total=this.calculateTotal();
   }
 
+  calculateTotal():number{
+    let sum=0;
+    this.outcomes?.forEach(value => {
+      sum +=(value.amount);
+    });
+    return sum;
+  }
 }
